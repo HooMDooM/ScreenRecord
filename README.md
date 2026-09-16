@@ -1,55 +1,55 @@
 # ScreenRecord
 
-Приложение для macOS в меню-баре: запись экрана, окна или области и скриншоты с разметкой поверх кадра.
+A macOS menu-bar app for recording the screen, a window, or a region, and for taking annotated screenshots.
 
-- Запись до 60 FPS, системный звук и микрофон
-- Скриншот области с рисованием, стрелками, текстом и копированием в буфер
-- Горячие клавиши (по умолчанию `⇧⌘S` — видео, `⇧⌘A` — скриншот)
-- Папка сохранения, качество, кодек и сочетания клавиш в настройках
+- Record up to 60 FPS with system audio and microphone
+- Capture a region and draw arrows, shapes, and text on the still frame
+- Hotkeys (default: `⇧⌘S` for video, `⇧⌘A` for a screenshot)
+- Output folder, quality, codec, and shortcuts are configurable
 
-Нужны **macOS 15** и новее, **Xcode** (Swift toolchain).
+Requires **macOS 15** or later and **Xcode** (Swift toolchain).
 
-## Установка из исходников
+## Install from source
 
-1. Клонируйте репозиторий:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/HooMDooM/ScreenRecord.git
 cd ScreenRecord
 ```
 
-2. Соберите приложение:
+2. Build the app:
 
 ```bash
 ./build.sh
 ```
 
-3. Запустите:
+3. Launch it:
 
 ```bash
 open build/ScreenRecord.app
 ```
 
-Или перетащите `build/ScreenRecord.app` в папку **Программы**.
+Or drag `build/ScreenRecord.app` into **Applications**.
 
-Если есть сертификат Apple Development, скрипт подпишет им приложение — разрешение на запись экрана не будет слетать после каждой пересборки. Без сертификата подпись будет ad-hoc.
+If an Apple Development certificate is available, the script signs the app with it so Screen Recording permission survives rebuilds. Without a certificate it uses an ad-hoc signature.
 
-## Разрешения
+## Permissions
 
-При первом запуске macOS попросит доступ:
+On first launch macOS will ask for access:
 
-1. **Системные настройки → Конфиденциальность и безопасность → Запись экрана** — включите ScreenRecord.
-2. Для голоса — доступ к **микрофону**.
-3. Для показа нажатий клавиш в видео — **Универсальный доступ**.
+1. **System Settings → Privacy & Security → Screen Recording** — enable ScreenRecord.
+2. Microphone access, if you want voice in the recording.
+3. Accessibility, if you want keystrokes shown in the video.
 
-После выдачи прав перезапустите приложение, если система об этом попросит.
+Relaunch the app if the system asks you to.
 
-## Как пользоваться
+## Usage
 
-Клик по иконке в меню-баре открывает панель. Сверху переключатель **Скриншот / Видео**, ниже — экран, диапазон или окно.
+Click the menu-bar icon to open the panel. Switch **Screenshot / Video** at the top, then pick the screen, a region, or a window.
 
-**Видео.** Выберите область или экран, настройте FPS и звук, нажмите REC. Во время записи в трее — стоп и пауза. Повторное `⇧⌘S` останавливает запись.
+**Video.** Choose a region or display, set FPS and audio, press REC. While recording, the tray shows Stop and Pause. Pressing `⇧⌘S` again stops the capture.
 
-**Скриншот.** Выделите область, рисуйте прямо на кадре, затем копируйте (`⌘C`) или сохраните. Первый клик по «Копировать» сразу кладёт снимок в буфер.
+**Screenshot.** Drag a region, annotate the frozen frame, then copy (`⌘C`) or save. Copy puts the image on the clipboard on the first click.
 
-Файлы по умолчанию сохраняются в `~/Movies`. Папку и остальные параметры можно сменить в настройках (шестерёнка на панели или правый клик по иконке в трее).
+Files are saved to `~/Movies` by default. Change the folder and other options in Settings (gear icon on the panel, or right-click the tray icon).
