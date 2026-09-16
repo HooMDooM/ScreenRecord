@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key>
+    <string>ScreenRecord</string>
+    <key>CFBundleDisplayName</key>
+    <string>ScreenRecord</string>
+    <key>CFBundleExecutable</key>
+    <string>ScreenRecord</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.darkgames.screenrecord</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>15.0</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Микрофон используется для записи голоса поверх видео экрана.</string>
+    <key>NSAppleEventsUsageDescription</key>
+    <string>Требуется для открытия папки с записями.</string>
+</dict>
+</plist>
